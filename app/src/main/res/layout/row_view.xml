@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.njsyg.smarthomeapp.common.utils.RippleView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ripple="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="#fefefe"
+    android:layout_height="match_parent">
+<!--RecyclerView，，item-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="#fefefe"
+        android:orientation="horizontal">
+
+<!--智能设备图片-->
+        <ImageView
+            android:id="@+id/im_zhuang_tai"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:padding="5dp"
+            android:src="@drawable/online" />
+
+        <LinearLayout
+            android:id="@+id/linearLayoutItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+<!--智能开关名称-->
+            <TextView
+                android:id="@+id/tv_kai_guan_wei_zhi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:text="卧室智能开关"
+                android:textColor="@color/colorText"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+<!-- 电流 -->
+                <TextView
+                    android:id="@+id/tv_dian_liu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:text="1.2A"
+                    android:textColor="@color/colorText"
+                    android:textSize="15sp" />
+                <!-- 电压 -->
+                <TextView
+                    android:id="@+id/tv_dian_ya"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:text="220V"
+                    android:textColor="@color/colorText"
+                    android:textSize="15sp" />
+<!-- 用电量 -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:text="用电: "
+                    android:textColor="@color/colorText"
+                    android:textSize="15sp" />
+                <!--耗电量：刷新数据-->
+                <TextView
+                    android:id="@+id/tv_hao_dian_liang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="0dp"
+                    android:paddingTop="10dp"
+                    android:text="23"
+                    android:textColor="@color/colorText"
+                    android:textSize="15sp" />
+                <!--耗电量：单位-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="0dp"
+                    android:paddingTop="10dp"
+                    android:text="kw/h"
+                    android:textColor="@color/colorText"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </LinearLayout>
+<!--开关图片-->
+        <ImageView
+            android:id="@+id/im_kai_guan"
+            android:layout_width="65dp"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:src="@drawable/open" />
+
+    </LinearLayout>
+
+    <!--虚线-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/colorLine" />
+</com.njsyg.smarthomeapp.common.utils.RippleView>

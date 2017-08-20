@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <!--自定义版色-->
+    <color name="colorTitle">#20b1f5</color>
+    <color name="colorText">#101010</color>
+    <color name="colorBackground">#ffffff</color>
+    <color name="colorLine">#7db7b7b7</color>
+    <color name="rippelColor">#d620b1f5</color>
+    <color name="ho_place">#f0f0f0</color>
+    <color name="red">#f00</color>
+    <color name="yellow">#ff0</color>
+    <color name="start_color">#d3d3d3</color>
+    <color name="end_color">#00B366</color>
+    <color name="green">#3b8d18</color>
+    <color name="line_and_outline_grey">#d9d9d9</color>
+</resources>

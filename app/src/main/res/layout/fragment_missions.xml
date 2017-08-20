@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ripple="http://schemas.android.com/apk/res-auto"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+  >
+
+<!--标题-->
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#20b1f5"
+        android:weightSum="1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?android:actionBarSize"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="1">
+
+            <com.njsyg.smarthomeapp.common.utils.RippleView
+                android:id="@+id/more"
+                android:layout_width="?android:actionBarSize"
+                android:layout_height="?android:actionBarSize"
+                android:layout_margin="0dp"
+                ripple:rv_centered="true">
+                <!--标题栏：返回图片-->
+                <ImageView
+                    android:layout_width="?android:actionBarSize"
+                    android:layout_height="?android:actionBarSize"
+                    android:background="#20b1f5"
+                    android:padding="12dp"
+                    android:src="@drawable/menu" />
+            </com.njsyg.smarthomeapp.common.utils.RippleView>
+            <!--标题栏 ： 首页-->
+
+            <!--标题栏添加-->
+            <com.njsyg.smarthomeapp.common.utils.RippleView
+                android:id="@+id/more2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_margin="0dp"
+                ripple:rv_type="doubleRipple">
+
+                <ImageView
+
+                    android:layout_width="?android:actionBarSize"
+                    android:layout_height="?android:actionBarSize"
+                    android:layout_gravity="center"
+                    android:background="#20b1f5"
+                    android:padding="8dp"
+                    android:src="@drawable/addd" />
+            </com.njsyg.smarthomeapp.common.utils.RippleView>
+            <com.flyco.tablayout.CommonTabLayout
+                android:id="@+id/title_up"
+                android:layout_width="150dp"
+                android:layout_height="80dp"
+                android:background="#00ffffff"
+                tl:tl_iconHeight="40dp"
+                tl:tl_iconWidth="80dp"
+                tl:tl_indicator_color="#f1f1f1"
+                tl:tl_indicator_height="0dp"
+
+                tl:tl_textsize="0sp"
+                tl:tl_bar_color="#ffffff"
+                tl:tl_tab_padding="20dp"
+                tl:tl_indicator_corner_radius="5dp"
+
+                android:layout_centerHorizontal="true"
+                 />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/time_task_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/actionbar" />
+    <!-- 自定义变提篮结束==================================== -->
+</RelativeLayout>

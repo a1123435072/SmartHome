@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ripple="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fefefe"
+    android:orientation="vertical">
+<!--RecyclerView，，家庭服务器：item-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:background="#fafafa"
+        android:padding="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+            <ImageView
+                android:id="@+id/im_smart_device_image"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/device"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true" />
+            <TextView
+                android:id="@+id/tv_smart_device_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="17dp"
+                android:text="智能设备"
+                android:textColor="#e300090b"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/im_smart_device_image" />
+            <ImageView
+                android:id="@+id/im_oher_smart_device"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/icon_morem"
+                android:layout_toStartOf="@+id/im_edit_smart_device"
+                android:layout_alignTop="@+id/im_edit_smart_device" />
+            <ImageView
+                android:id="@+id/im_edit_smart_device"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/icon_edit"
+                android:layout_alignTop="@+id/im_delete_smart_device"
+                android:layout_toStartOf="@+id/im_delete_smart_device" />
+
+
+            <ImageView
+                android:id="@+id/im_delete_smart_device"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="9dp"
+                android:background="@drawable/delete" />
+
+        </RelativeLayout>
+    </LinearLayout>
+    <!--虚线-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/colorLine" />
+</LinearLayout>

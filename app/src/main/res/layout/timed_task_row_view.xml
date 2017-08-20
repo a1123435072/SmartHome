@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--RecyclerView，，家庭服务器：item-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="0dp"
+        android:background="#fafafa"
+        android:padding="5dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+            <!--家庭服务器图标-->
+            <ImageView
+                android:id="@+id/im_smartdivice_kai_guan"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="9dp"/>
+            <!--定时任务设备名称-->
+            <TextView
+                android:id="@+id/tv_smart_device_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="14dp"
+                android:text="智能设备"
+                android:textColor="#e300090b"
+                android:textSize="19dp"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/im_smart_device_image" />
+            <!--定时任务设备图片-->
+            <ImageView
+                android:id="@+id/im_smart_device_image"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/linearLayout"
+                android:layout_marginEnd="15dp"
+                android:layout_alignBottom="@+id/im_smartdivice_kai_guan"
+                android:layout_toStartOf="@+id/im_smartdivice_kai_guan">
+                <!--定时任务设备开启/关闭状态-->
+                <TextView
+                    android:id="@+id/tv_smart_device_open"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14dp"
+                    android:text="开启"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:text="," />
+                <!--定时任务 执行频率-->
+                <TextView
+                    android:id="@+id/tv_smart_device_chong_fu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14dp"
+                    android:text="每天" />
+            </LinearLayout>
+            <!--定时任务设置定时时间-->
+            <TextView
+                android:id="@+id/tv_smart_divice_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#e300090b"
+                android:textSize="25dp"
+                android:text="07:00"
+                android:layout_alignEnd="@+id/linearLayout"
+                android:layout_alignBottom="@+id/tv_smart_device_name" />
+        </RelativeLayout>
+    </LinearLayout>
+    <!--虚线-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/colorLine" />
+</LinearLayout>

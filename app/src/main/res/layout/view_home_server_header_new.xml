@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#7da7a7a7" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:padding="8dp">
+
+        <!--家庭服务器，向下的箭头-->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/home_server_down_arrow_icon"
+            android:src="@drawable/down" />
+
+        <!--家庭服务器列表名称-->
+        <TextView
+            android:id="@+id/tv_home_server_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:text="@string/home_server_list"
+            android:textSize="18sp" />
+
+        <!--家庭服务器，添加按钮-->
+        <ImageView
+            android:id="@+id/im_home_server_header_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:contentDescription="@string/home_server_add_icon"
+            android:src="@drawable/addblack" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#7da7a7a7" />
+</LinearLayout>

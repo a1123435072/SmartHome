@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ripple="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<!--首页index-->
+    <!--自定义变标题栏-->
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorTitle">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?android:actionBarSize"
+            android:layout_alignParentTop="true">
+
+            <com.njsyg.smarthomeapp.common.utils.RippleView
+                android:id="@+id/iv_menu"
+                android:layout_width="?android:actionBarSize"
+                android:layout_height="?android:actionBarSize"
+                android:layout_margin="0dp"
+                ripple:rv_centered="true">
+                <!--标题栏：返回图片  android:layout_toRightOf="@+id/iv_menu"-->
+                <ImageView
+                    android:layout_width="?android:actionBarSize"
+                    android:layout_height="?android:actionBarSize"
+                    android:background="#20b1f5"
+                    android:padding="12dp"
+                    android:src="@drawable/menu" />
+            </com.njsyg.smarthomeapp.common.utils.RippleView>
+            <!--标题栏 ： 首页-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="首页"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+            <!--标题栏添加-->
+            <com.njsyg.smarthomeapp.common.utils.RippleView
+                android:id="@+id/iv_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_margin="0dp"
+                ripple:rv_type="doubleRipple">
+                <ImageView
+                    android:layout_width="?android:actionBarSize"
+                    android:layout_height="?android:actionBarSize"
+                    android:layout_gravity="center"
+                    android:background="#20b1f5"
+                    android:padding="5dp"
+                    android:src="@drawable/addd" />
+            </com.njsyg.smarthomeapp.common.utils.RippleView>
+
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+    <!-- 自定义变提篮结束==================================== -->
+
+    <!--自定义的点击：变大特效  家庭服务器-->
+    <com.njsyg.smarthomeapp.common.utils.RippleView
+        android:id="@+id/home_server"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_below="@+id/actionbar"
+        android:layout_marginTop="5dp"
+        android:background="#fafafa"
+        android:padding="5dp"
+        ripple:rv_type="rectangle"
+        ripple:rv_zoom="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+<!--家庭服务器：图标-->
+                <ImageView
+                    android:id="@+id/home_server_image"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentStart="true"
+                    android:background="@drawable/home_server" />
+<!--家庭服务器名称-->
+                <TextView
+                    android:id="@+id/tv_home_server"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/home_server_image"
+                    android:paddingLeft="18dp"
+                    android:text="家庭服务器"
+                    android:textColor="@color/colorText"
+                    android:textSize="22dp" />
+
+                <ImageView
+                    android:id="@+id/moreeeee"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/next" />
+            </RelativeLayout>
+        </LinearLayout>
+
+
+    </com.njsyg.smarthomeapp.common.utils.RippleView>
+    <!--自定义的点击变大特效：结束================================== -->
+
+    <!--画一条：横线-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/home_server"
+        android:id="@+id/linearLayout">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorLine" />
+    </LinearLayout>
+
+    <!--RecyclerView滑动布局指向row_view.xml -->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        android:layout_below="@+id/linearLayout"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

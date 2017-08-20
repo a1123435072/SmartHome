@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+    <!--RecyclerView，，家庭服务器：item-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="0dp"
+        android:background="#ffffff"
+        android:padding="5dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp">
+            <!--情景模式图标-->
+            <!--情景模式名称-->
+            <TextView
+                android:id="@+id/tv_contextual_modele_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/im_contextual_modele_image"
+                android:layout_marginStart="15dp"
+                android:layout_toEndOf="@+id/im_contextual_modele_image"
+                android:text="回家模式"
+                android:textColor="#e300090b"
+                android:textSize="22dp" />
+<!--情景模式分割线-->
+          <TextView
+                android:layout_width="0.5dp"
+                android:layout_height="70dp"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="17dp"
+                android:layout_toStartOf="@+id/iv_contextual_modele_start_up"
+                android:background="#af939393" />
+<!--线性布局-->
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/tv_contextual_modele_name"
+                android:layout_below="@+id/tv_contextual_modele_name"
+                android:orientation="horizontal">
+<!--情景模式灯-->
+                <ImageView
+                    android:id="@+id/iv_contextual_light"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/light" />
+<!--情景模式电视-->
+                <ImageView
+                    android:id="@+id/iv_contextual_modele_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/tv" />
+<!--音乐-->
+                <ImageView
+                    android:id="@+id/iv_contextual_modele_music"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/music" />
+            </LinearLayout>
+            <!--情景模式 房子图标-->
+            <ImageView
+                android:id="@+id/im_contextual_modele_image"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/contextual_model_house"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true" />
+            <!--启动按钮-->
+            <ImageView
+                android:id="@+id/iv_contextual_modele_start_up"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="16dp"
+
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+    </LinearLayout>
+    <!--虚线-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/colorLine" />
+</LinearLayout>

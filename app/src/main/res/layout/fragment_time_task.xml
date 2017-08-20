@@ -1,0 +1,15 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context="com.njsyg.smarthomeapp.fragments.TimeTaskFragment">
+
+    <!-- TODO: 定时任务 Fragment界面， 一个RecycleView-->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/Time_Task_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/actionbar"
+        android:scrollbars="vertical" />
+</FrameLayout>

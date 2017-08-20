@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fefefe">
+    <!--RecyclerView，，家庭服务器：item-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fafafa"
+        android:id="@+id/linearLayoutItem" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+            <TextView
+                android:id="@+id/tv_home_server_ip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="11dp"
+                android:paddingTop="5dp"
+                android:layout_below="@+id/tv_home_server_name"
+                android:layout_toEndOf="@+id/im_home_server_image"
+                android:text="192.168.1.1"
+                android:textColor="#b70f171a" />
+            <ImageView
+                android:id="@+id/im_home_server_image"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/home_server"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                />
+            <TextView
+                android:id="@+id/tv_home_server_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:text="家庭服务器01"
+                android:textSize="16sp"
+                android:textColor="#e300090b"
+                android:layout_toEndOf="@+id/im_home_server_image" />
+            <ImageView
+                android:id="@+id/im_default_home_server"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginRight="20dp"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/im_edit_home_server"
+                android:background="@drawable/icon_notdefault" />
+            <ImageView
+                android:id="@+id/im_edit_home_server"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginRight="20dp"
+                android:layout_alignTop="@+id/im_delete_home_server"
+                android:layout_toStartOf="@+id/im_delete_home_server"
+                android:background="@drawable/icon_edit" />
+            <!--删除家庭服务器图标-->
+            <ImageView
+                android:id="@+id/im_delete_home_server"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/delete" />
+        </RelativeLayout>
+    </LinearLayout>
+    <!--虚线-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/colorLine" />
+</LinearLayout>

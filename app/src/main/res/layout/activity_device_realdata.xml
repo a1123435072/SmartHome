@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ripple="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!-- 标题-->
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#20b1f5"
+        android:weightSum="1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?android:actionBarSize"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="1">
+
+            <com.njsyg.smarthomeapp.common.utils.RippleView
+                android:id="@+id/more"
+                android:layout_width="?android:actionBarSize"
+                android:layout_height="?android:actionBarSize"
+                android:layout_margin="0dp"
+                ripple:rv_centered="true"
+                ripple:rv_type="doubleRipple">
+                <!--标题栏：返回图片-->
+                <ImageView
+                    android:layout_width="?android:actionBarSize"
+                    android:layout_height="?android:actionBarSize"
+                    android:layout_gravity="center"
+                    android:background="#20b1f5"
+                    android:padding="14dp"
+                    android:src="@drawable/backk"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true"
+                    android:id="@+id/imgage_back" />
+            </com.njsyg.smarthomeapp.common.utils.RippleView>
+            <!--标题栏 ： 首页-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="设备管理"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+            <!--标题栏添加-->
+            <com.njsyg.smarthomeapp.common.utils.RippleView
+                android:id="@+id/more2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_margin="0dp"
+                ripple:rv_type="doubleRipple">
+            </com.njsyg.smarthomeapp.common.utils.RippleView>
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+    <!-- 自定义标题栏结束==================================== -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/ho_place" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/image_onlinestate"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/device" />
+
+                <TextView
+                    android:id="@+id/txt_nickvalue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_toRightOf="@+id/image_onlinestate"
+                    android:textSize="20dp"
+                    android:text="安装位置/昵称" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt_U"
+                    android:layout_alignBottom="@+id/txt_nickvalue"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@+id/image_onlinestate"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="15dp"
+                    android:text="电压"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt_I"
+                    android:layout_alignBottom="@+id/txt_nickvalue"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@+id/txt_U"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="15dp"
+                    android:text="电流"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt_E"
+                    android:layout_alignBottom="@+id/txt_nickvalue"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@+id/txt_I"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="15dp"
+                    android:text="电量"/>
+
+                <ImageView
+                    android:id="@+id/image_switchstate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:src="@drawable/open" />
+            </RelativeLayout>
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/ho_place" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp">
+           <CheckBox
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:id="@+id/checkbox_U"
+               android:layout_marginLeft="10dp"
+               android:text="电压"></CheckBox>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkbox_I"
+                android:layout_marginLeft="10dp"
+                android:text="电流"></CheckBox>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkbox_E"
+                android:checked="true"
+                android:layout_marginLeft="10dp"
+                android:text="耗电量"></CheckBox>
+
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/ho_place" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="300dp">
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/chart_real"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_gravity="center_horizontal" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+            <Button
+                android:id="@+id/btn_his"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="历史数据"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+
